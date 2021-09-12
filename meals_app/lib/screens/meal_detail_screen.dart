@@ -37,12 +37,14 @@ class MealDetailScreen extends StatelessWidget {
     final selectedMeal = DUMMY_MEALS.firstWhere((meal) => meal.id == mealId);
     return Scaffold(
         appBar: AppBar(
+          elevation: 15,
           title: Text('${selectedMeal.title}'),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Container(
+                margin: EdgeInsets.only(top: 2),
                 height: 300,
                 width: double.infinity,
                 child: Image.network(selectedMeal.imageUrl),
