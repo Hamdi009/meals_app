@@ -16,7 +16,7 @@ class MainDrawer extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      onTap: tabHandler(),
+      onTap: () => tabHandler(),
     );
   }
 
@@ -41,10 +41,10 @@ class MainDrawer extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          buildListTile("Meals", Icons.restaurant, () async {
+          buildListTile("Meals", Icons.restaurant, () {
             Navigator.of(context).pushNamed('/');
           }),
-          buildListTile("Filters", Icons.settings, () async {
+          buildListTile("Filters", Icons.settings, () {
             Navigator.of(context).pushNamed(FiltersScreen.routName);
           }),
         ],
